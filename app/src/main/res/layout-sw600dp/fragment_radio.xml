@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative_radio"
+        android:layout_below="@+id/toolbar">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_fondo"
+            android:id="@+id/image_fondo_radio" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:layout_alignParentBottom="true" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/lyt_playbar">
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/albumArt_bg"
+                android:layout_width="205dp"
+                android:layout_height="205dp"
+                android:layout_centerInParent="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bg_album_art"
+                app:riv_border_color="@color/colorArtBorder"
+                app:riv_mutate_background="true" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/albumArt"
+                android:layout_width="197dp"
+                android:layout_height="197dp"
+                android:layout_centerInParent="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bg_album_art_bg"
+                app:riv_mutate_background="true" />
+            <ImageView
+                android:id="@+id/img_logo"
+                android:layout_width="197dp"
+                android:layout_height="197dp"
+                android:layout_centerInParent="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bg_album_art_encima" />
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lyt_playbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lyt_metadata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <eu.gsottbauer.equalizerview.EqualizerView
+                    android:id="@+id/equalizer"
+                    android:layout_width="180dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="5dp"
+                    app:barColor="@color/white"
+                    app:barCount="40"
+                    app:barWidth="5dp"
+                    app:marginLeft="1dp"
+                    app:marginRight="1dp"
+                    app:runInBatterySaveMode="false" />
+
+                <TextView
+                    android:id="@+id/now_playing_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abel"
+                    android:gravity="center"
+                    android:text="@string/now_playing"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/now_playing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="@dimen/widget_margin"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/already_playing_tooltip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/radio_playing_other"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+                <LinearLayout
+                    android:id="@+id/layout_action"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_img_medium"
+                    android:layout_above="@+id/now_playing"
+                    android:layout_marginTop="@dimen/widget_margin"
+                    android:layout_marginBottom="@dimen/widget_margin"
+                    android:layout_marginLeft="@dimen/dialog_margin"
+                    android:layout_marginRight="@dimen/dialog_margin"
+                    android:gravity="center_horizontal"
+                    android:weightSum="5">
+
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/layout_facebook"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        app:mrl_rippleAlpha="0.2"
+                        app:mrl_rippleColor="@color/play_color_text"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">
+
+
+                        <ImageView
+                            android:id="@+id/btn_facebook"
+                            android:layout_width="@dimen/size_img_medium"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_facebook_white_36dp"
+                            />
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/layout_whatsapp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        app:mrl_rippleAlpha="0.2"
+                        app:mrl_rippleColor="@color/play_color_text"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">
+                        <ImageView
+                            android:id="@+id/btn_whatsapp"
+                            android:layout_width="@dimen/size_img_medium"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_whatsapp_white_36dp"
+                            />
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/layout_instagram"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        app:mrl_rippleAlpha="0.2"
+                        app:mrl_rippleColor="@color/play_color_text"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">
+                        <ImageView
+                            android:id="@+id/btn_instagram"
+                            android:layout_width="@dimen/size_img_medium"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_insta_white_36dp"
+                            />
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:visibility="gone"
+                        android:id="@+id/layout_share"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        app:mrl_rippleAlpha="0.2"
+                        app:mrl_rippleColor="@color/play_color_text"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">
+                        <ImageView
+                            android:id="@+id/btn_share"
+                            android:layout_width="@dimen/size_img_medium"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_share_white_36dp"
+                            />
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/layout_website"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        app:mrl_rippleAlpha="0.2"
+                        app:mrl_rippleColor="@color/play_color_text"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">
+                        <ImageView
+                            android:id="@+id/btn_website"
+                            android:layout_width="@dimen/size_img_medium"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_website_white_36dp"
+                            />
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/img_timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginRight="3dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_timer" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/btn_play_pause"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_pause_white"
+                        app:backgroundTint="#FFD000"
+                        app:fabSize="normal" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/img_volume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="90dp"
+                        android:layout_marginRight="90dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_volume" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:visibility="gone"
+        android:paddingTop="?attr/actionBarSize"
+        android:background="@color/bg_overlay"
+        android:layout_marginBottom="90dp"
+        android:id="@+id/coordinator_container_menu">
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:elevation="20dp"
+        android:visibility="gone"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        android:id="@+id/linear_bottom_radio"
+        android:layout_alignParentBottom="true">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@color/black"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="25dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/image_fondo_bottom_radio"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@color/colorGreen"
+                    android:id="@+id/image_arrowtop_radio"
+                    android:src="@drawable/ic_arrow_top"
+                    android:layout_gravity="center_vertical"
+                    app:riv_mutate_background="true"/>
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/image_bottom_radio"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/bg_album_art_bg"
+                    app:riv_mutate_background="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:shadowColor="@color/black"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="2"
+                        android:id="@+id/text_cancion_radio"
+                        android:text="@string/now_playing"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:shadowColor="@color/black"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="2"
+                        android:id="@+id/text_artista_radio"
+                        android:text="@string/app_name"
+                        android:textColor="@color/colorAccent"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_play_white"
+                    android:id="@+id/image_play_radio"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+    <androidx.appcompat.widget.Toolbar
+        android:visibility="visible"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:contentInsetStartWithNavigation="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+</RelativeLayout>

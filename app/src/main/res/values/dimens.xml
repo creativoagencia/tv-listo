@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="album_art_width">210dp</dimen>
+    <dimen name="album_art_height">210dp</dimen>
+    <dimen name="album_art_margin">36dp</dimen>
+
+    <dimen name="dialog_margin">10sp</dimen>
+    <dimen name="size_img_medium">36dp</dimen>
+    <dimen name="size_img_small">24dp</dimen>
+    <dimen name="size_img_tiny">18dp</dimen>
+    <dimen name="size_img_large">48dp</dimen>
+    <dimen name="size_img_big">60dp</dimen>
+    <dimen name="widget_margin_top">4dp</dimen>
+    <dimen name="my_button_width">32dp</dimen>
+
+    <dimen name="widget_margin">8dp</dimen>
+
+    <dimen name="bubble_size">25dp</dimen>
+    <dimen name="wave_height">60dp</dimen>
+    <dimen name="footer_height">170dp</dimen>
+
+</resources>

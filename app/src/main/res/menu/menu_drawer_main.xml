@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/drawer_megadjs"
+        android:icon="@drawable/ic_drawer_home"
+        android:title="@string/drawer_dj" />
+
+    <item
+        android:id="@+id/drawer_prog"
+        android:icon="@drawable/ic_drawer_social"
+        android:title="@string/drawer_prog" />
+    <item
+        android:id="@+id/drawer_videoclips"
+        android:icon="@drawable/ic_drawer_home"
+        android:title="@string/drawer_video" />
+
+    <item
+        android:id="@+id/drawer_musica"
+        android:icon="@drawable/ic_drawer_social"
+        android:title="@string/drawer_musica" />
+    <item
+        android:id="@+id/drawer_comentarios"
+        android:icon="@drawable/ic_drawer_home"
+        android:title="@string/drawer_com" />
+
+    <item
+        android:id="@+id/drawer_publicidad"
+        android:icon="@drawable/ic_drawer_social"
+        android:title="@string/drawer_publi" />
+</menu>

@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "39555575708",
+    "firebase_url": "https://queubo-app-default-rtdb.firebaseio.com",
+    "project_id": "queubo-app",
+    "storage_bucket": "queubo-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39555575708:android:076ab844460bad3e0d2259",
+        "android_client_info": {
+          "package_name": "com.creativoagencia.ponteonceradio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39555575708-u1rab3c70633h5i5hu4r31162klmk44d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCi-dgGphlQ2MUpQh7rbY6SgeXjvU0Rfv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39555575708-u1rab3c70633h5i5hu4r31162klmk44d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39555575708:android:a142a6aabe6204e60d2259",
+        "android_client_info": {
+          "package_name": "com.queubo.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39555575708-u1rab3c70633h5i5hu4r31162klmk44d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCi-dgGphlQ2MUpQh7rbY6SgeXjvU0Rfv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39555575708-u1rab3c70633h5i5hu4r31162klmk44d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

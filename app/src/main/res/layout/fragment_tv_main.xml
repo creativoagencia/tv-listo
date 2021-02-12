@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constraintTvMainFrag"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/imageTvMainLogo"
+        android:src="@drawable/logo_inicio"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginStart="55dp"
+        app:layout_constraintVertical_weight="1.2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/playerviewTvMain"/>
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/playerviewTvMain"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintVertical_weight="1.5"
+        app:layout_constraintTop_toBottomOf="@id/imageTvMainLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/relativeTvMain"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/relativeTvMain"
+        android:layout_marginTop="10dp"
+        app:layout_constraintVertical_weight="1.5"
+        app:layout_constraintTop_toBottomOf="@id/playerviewTvMain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/lyt_playbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lyt_metadata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/now_playing_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abel"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/now_playing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="@dimen/widget_margin"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text="@string/subtitle_tvmain"
+                    android:textSize="13sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/already_playing_tooltip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/radio_playing_other"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+                <LinearLayout
+                    android:id="@+id/layout_action"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_img_medium"
+                    android:layout_above="@+id/now_playing"
+                    android:layout_marginTop="@dimen/widget_margin"
+                    android:layout_marginBottom="@dimen/widget_margin"
+                    android:layout_marginLeft="@dimen/dialog_margin"
+                    android:layout_marginRight="@dimen/dialog_margin"
+                    android:gravity="center_horizontal"
+                    android:weightSum="5">
+
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/layout_facebook"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        app:mrl_rippleAlpha="0.2"
+                        app:mrl_rippleColor="@color/play_color_text"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">
+
+
+                        <ImageView
+                            android:id="@+id/btn_facebook"
+                            android:layout_width="@dimen/size_img_medium"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_facebook_white_36dp"
+                            />
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/layout_whatsapp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        app:mrl_rippleAlpha="0.2"
+                        app:mrl_rippleColor="@color/play_color_text"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">
+                        <ImageView
+                            android:id="@+id/btn_whatsapp"
+                            android:layout_width="@dimen/size_img_medium"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_whatsapp_white_36dp"
+                            />
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/layout_instagram"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        app:mrl_rippleAlpha="0.2"
+                        app:mrl_rippleColor="@color/play_color_text"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">
+                        <ImageView
+                            android:id="@+id/btn_instagram"
+                            android:layout_width="@dimen/size_img_medium"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_insta_white_36dp"
+                            />
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/layout_chat"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:visibility="gone"
+                        android:layout_weight="1"
+                        app:mrl_rippleAlpha="0.2"
+                        app:mrl_rippleColor="@color/play_color_text"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">
+                        <ImageView
+                            android:id="@+id/btn_chat"
+                            android:layout_width="@dimen/size_img_medium"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_tv"
+                            />
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:visibility="gone"
+                        android:id="@+id/layout_share"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        app:mrl_rippleAlpha="0.2"
+                        app:mrl_rippleColor="@color/play_color_text"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">
+                        <ImageView
+                            android:id="@+id/btn_share"
+                            android:layout_width="@dimen/size_img_medium"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_share_white_36dp"
+                            />
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/layout_website"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        app:mrl_rippleAlpha="0.2"
+                        app:mrl_rippleColor="@color/play_color_text"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">
+                        <ImageView
+                            android:id="@+id/btn_website"
+                            android:layout_width="@dimen/size_img_medium"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_website_white_36dp"
+                            />
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="15dp"
+                android:paddingTop="10dp"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/img_timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginRight="3dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_clock_vector" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/btn_play_pause"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_pause_white"
+                        app:backgroundTint="@color/colorPrimary"
+                        app:fabSize="normal" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/img_volume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="75dp"
+                        android:layout_marginRight="75dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_volume_vector" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_play_pause2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_pause_white"
+        android:visibility="gone"
+        app:backgroundTint="@color/playTransparent"
+        app:fabSize="normal"
+        app:elevation="3dp"
+        app:layout_constraintVertical_bias="1"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

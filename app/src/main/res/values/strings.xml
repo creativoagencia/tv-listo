@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+    <!--application name-->
+    <string name="app_name">Family TV</string>
+    <string name="app_email">Aavcreativos2021@gmail.com</string>
+    <string name="info_copyright">© Diseñado por Creativo Agencia</string>
+
+    <!--admob banner and interstitial id-->
+    <string name="admob_publisher_id">pub-3940256099942544</string>
+    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="admob_banner_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_interstitial_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+
+    <!--navigation drawer menu name-->
+    <string name="drawer_home">INICIO</string>
+    <string name="drawer_social">REDES SOCIALES</string>
+    <string name="drawer_rate">CALIFICAR</string>
+    <string name="drawer_more">VISITE NUESTRA WEB</string>
+    <string name="drawer_about">SOBRE NOSOTROS</string>
+    <string name="about_app_privacy_policy">PRIVACIDAD</string>
+    <string name="drawer_sub_other">OTROS</string>
+
+    <!-- Menu Webview -->
+    <string name="drawer_dj"></string>
+    <string name="drawer_prog"></string>
+    <string name="drawer_video"></string>
+    <string name="drawer_musica"></string>
+    <string name="drawer_com"></string>
+    <string name="drawer_publi"></string>
+    <string name="drawer_tv"></string>
+
+
+    <!-- media viewer and radio-->
+    <string name="volume_low">¡Sube tu volumen!</string>
+    <string name="now_playing">En Vivo</string>
+    <string name="notification_playing">Sonando Ahora</string>
+    <string name="toggle_fullscreen">Toggle Fullscreen</string>
+    <string name="audio_notification">Minimizar Radio</string>
+    <string name="error_retry">No se pudo conectar a la transmisión</string>
+    <string name="error_retry_later">Por favor intente nuevamente en unos segundos</string>
+    <string name="radio_playing_other">Already playing another station. Press play again to play this station instead.</string>
+    <string name="empty_textview">Error al cargar datos</string>
+
+    <!--more app link-->
+    <string name="play_more_apps">https://www.karabanatvradio.com</string>
+
+    <!--social network-->
+    <string name="social_tab1">Facebook</string>
+    <string name="social_tab2">Twitter</string>
+    <string name="facebook_url">https://web.facebook.com/krabanatvradio</string>
+    <string name="twitter_url">https://web.facebook.com/krabanatvradio</string>
+
+    <!--privacy policy-->
+    <!--this privacy policy url will be used if admin panel mode is disabled-->
+    <string name="privacy_policy_url">https://web.facebook.com/creativoagencias/</string>
+
+
+    <string name="title_permissions">Permissions</string>
+    <string name="btn_next">Next</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="toast_permissions_not_granted">Permissions not granted.</string>
+    <string name="message_permissions"><![CDATA[To allow audio visualization view to process audio stream app needs an access to your <b>Microphone</b>.]]></string>
+    <string name="start_recognition">Start Recognition</string>
+    <string name="stop_recognition">Stop Recognition</string>
+    <string name="start_recording">Start Recording</string>
+    <string name="stop_recording">Stop Recording</string>
+
+    <!--share text-->
+    <string name="share">Compartir</string>
+    <string name="share_text">Family TV, Disfruta de la Mejor Programación GRATIS: </string>
+    <string name="popup">Menú</string>
+
+    <!--app about information-->
+    <string name="about_app_name">Nombre de la APP</string>
+    <string name="about_app_version">Version Instalada</string>
+    <string name="about_app_email">Correo Electronico</string>
+    <string name="about_app_copyright">Copyright</string>
+    <string name="about_app_rate">Califica esta APP</string>
+    <string name="about_app_more">Nuestros Trabajos</string>
+    <string name="sub_about_app_version">Version 1.0.0</string>
+    <string name="sub_about_app_copyright">&#169;Creativo Agencia \n Cel.+51 975959016</string>
+    <string name="sub_about_app_rate">Dejanos un Comentario</string>
+    <string name="sub_about_app_more">Play Store Aicreativos</string>
+
+    <!--connection-->
+    <string name="dialog_connection_title">Servers unreachable</string>
+    <string name="dialog_connection_description">We can not connect with our APIs.\n\nPlease ensure that you have set up your API keys and parameters as documented!</string>
+    <string name="dialog_internet_title">No internet</string>
+    <string name="dialog_internet_description">You seem to have no internet connection, this app requires internet to load the content.</string>
+    <string name="no_network">¡Error al conectar la red!</string>
+    <string name="ok">OK</string>
+
+    <!--exit dialog-->
+    <string name="message">¿Qué quieres hacer?</string>
+    <string name="quit">SALIR</string>
+    <string name="minimize">MINIMIZAR</string>
+    <string name="cancel">CANCELAR</string>
+
+    <!--sleeping timer-->
+    <string name="sleep_time">Apagado Automatico</string>
+    <string name="min">Minutos</string>
+    <string name="set">INICIAR</string>
+    <string name="stop">STOP</string>
+
+    <!--others-->
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="loading_progress">Cargando&#8230;</string>
+    <string name="title_activity_tv">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="subtitle_tvmain">DISFRUTA DE LA MEJOR PROGRAMACIÓN</string>
+
+</resources>
