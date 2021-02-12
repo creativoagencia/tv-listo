@@ -191,6 +191,9 @@ public class TvMainActivity extends AppCompatActivity {
     }
     @Override
     public void onUserLeaveHint () {
+        if(getRequestedOrientation() == ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE){
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
         enterPIPMode();
     }
 }
