@@ -442,6 +442,8 @@ public class TvMainFragment extends Fragment {
         relativeTools.setVisibility(View.GONE);
         if(!isPIP) {
             fabPlayPause2.show();
+        }else{
+            fabPlayPause2.hide();
         }
         ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) playerView.getLayoutParams();
         //params.setMargins(dpToPx(0),dpToPx(0),dpToPx(0),dpToPx(0) );
@@ -456,7 +458,11 @@ public class TvMainFragment extends Fragment {
         relativeTools.setVisibility(View.VISIBLE);
         fabPlayPause2.hide();
         ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) playerView.getLayoutParams();
-        params.setMargins(dpToPx(15),dpToPx(25),dpToPx(15),dpToPx(10));
+        //params.setMargins(dpToPx(15),dpToPx(25),dpToPx(15),dpToPx(10));
+        params.bottomMargin=dpToPx(10);
+        params.topMargin=dpToPx(25);
+        params.leftMargin=dpToPx(15);
+        params.rightMargin = dpToPx(15);
         playerView.setLayoutParams(params);
     }
     private int dpToPx(int dp){

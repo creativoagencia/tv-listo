@@ -46,6 +46,12 @@ public class TvMainActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -148,30 +154,41 @@ public class TvMainActivity extends AppCompatActivity {
     @Override
     public void onPictureInPictureModeChanged(boolean isInPictureInPictureMode, Configuration newConfig) {
         isPIP=isInPictureInPictureMode;
-        if (isInPictureInPictureMode) {
+        Log.e("ConfigP", newConfig.orientation+"");
+        Log.e("PIP", isPIP+"");
+      /*  if (isInPictureInPictureMode) {
             hideViews();
         } else {
             showViews();
-        }
+        }*/
     }
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
 
+        Log.e("ConfigC", newConfig.orientation+"");
         int newOrientation = newConfig.orientation;
         if(newOrientation==Configuration.ORIENTATION_LANDSCAPE){
-            isFullScreen=true;
+            isFullScreen = true;
             setTheme(R.style.FullscreenTheme);
-            hideSystemUI();
+            //hideSystemUI();
             hideViews();
             coordinatorLayout.setFitsSystemWindows(false);
 
         }else if(newOrientation==Configuration.ORIENTATION_PORTRAIT){
-            isFullScreen=false;
-            setTheme(R.style.tvTheme);
-            showSystemUI();
-            showViews();
-            coordinatorLayout.setFitsSystemWindows(true);
+            if(isPIP){
+                isFullScreen = true;
+                setTheme(R.style.FullscreenTheme);
+               // hideSystemUI();
+                hideViews();
+                coordinatorLayout.setFitsSystemWindows(false);
+            }else {
+                isFullScreen = false;
+                setTheme(R.style.tvTheme);
+                //showSystemUI();
+                showViews();
+                coordinatorLayout.setFitsSystemWindows(true);
+            }
 
         }
         frag.setFullScreen(isFullScreen);
@@ -191,9 +208,6 @@ public class TvMainActivity extends AppCompatActivity {
     }
     @Override
     public void onUserLeaveHint () {
-        if(getRequestedOrientation() == ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE){
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        }
         enterPIPMode();
     }
 }
